@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/coffeeList">
+    <fragment
+        android:id="@+id/coffeeList"
+        android:name="com.example.lab_week_03.ListFragment"
+        android:label="List"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/coffee_id_action"
+            app:destination="@id/coffeeDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/coffeeDetail"
+        android:name="com.example.lab_week_03.DetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail" />
+</navigation>
