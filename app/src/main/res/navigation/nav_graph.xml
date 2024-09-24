@@ -2,20 +2,30 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/coffeeList">
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/listFragment">
     <fragment
-        android:id="@+id/coffeeList"
+        android:id="@+id/listFragment"
         android:name="com.example.lab_week_03.ListFragment"
-        android:label="List"
-        tools:layout="@layout/fragment_list">
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
         <action
-            android:id="@+id/coffee_id_action"
-            app:destination="@id/coffeeDetail" />
+            android:id="@+id/action_listFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
     </fragment>
     <fragment
-        android:id="@+id/coffeeDetail"
+        android:id="@+id/detailFragment"
         android:name="com.example.lab_week_03.DetailFragment"
-        android:label="Detail"
+        android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.lab_week_03.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" />
+    <fragment
+        android:id="@+id/cafeFragment"
+        android:name="com.example.lab_week_03.CafeFragment"
+        android:label="fragment_cafe"
+        tools:layout="@layout/fragment_cafe" />
 </navigation>
